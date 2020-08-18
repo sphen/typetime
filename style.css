@@ -1,0 +1,370 @@
+/*
+RESET 
+http://meyerweb.com/eric/tools/css/reset/ 
+v2.0 | 20110126
+License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* END RESET */
+
+body {
+  font-family: "Barlow", sans-serif;
+  font-size: 16px;
+  background: #0090c6;
+  color: #292d32;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+
+h3 {
+  font-size: 1.6rem;
+}
+
+h4 {
+  font-size: 1.4rem;
+}
+
+h5 {
+  font-size: 1.2rem;
+  padding: 0.5rem 0;
+}
+
+header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  text-align: center;
+  align-items: center;
+  min-height: 5vh;
+  padding: 1rem;
+}
+
+input {
+  background: none;
+  border: none;
+  border-bottom: 2px solid #0090c6;
+  font-family: "Barlow", sans-serif;
+  font-size: 16px;
+  padding: 0.25rem;
+  margin-bottom: 1rem;
+}
+
+.page {
+  background: #fafafa;
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.2);
+  min-height: 80vh;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  margin: 5vh;
+  padding: 5vh;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 1rem;
+  align-content: center;
+  justify-content: center;
+  min-height: 20vh;
+}
+
+@media (max-width: 800px) {
+  .page {
+    min-height: 80vh;
+  }
+  header {
+    grid-template-columns: 1fr;
+  }
+  .content {
+    grid-template-columns: 1fr;
+  }
+}
+
+.left,
+.right {
+  display: grid;
+  align-content: center;
+  margin: 1rem 0;
+}
+
+.lead {
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+.current {
+  padding-bottom: 1rem;
+  text-align: center;
+}
+
+.msg {
+  opacity: 1;
+  transition: opacity 0.4s ease;
+}
+
+.msg-hide {
+  opacity: 0;
+}
+
+.msg-red {
+  color: #F14C4F;
+}
+
+.msg-high {
+  color: #0090c6;
+}
+
+.seconds {
+  font-size: 1.4rem;
+}
+
+.txt-link {
+  color: #0090c6;
+  text-decoration: none;
+  transition: all 0.4s ease;
+}
+
+.txt-link:hover {
+  color: #292d32;
+}
+
+/* COLORS */
+.high-txt {
+  color: #8CC152;
+}
+
+.warn-txt {
+  color: #F14C4F;
+}
+
+/* TEST */
+.difficulty {
+  display: block;
+  color: #fafafa;
+  line-height: 48px;
+  text-decoration: none;
+  margin: 1rem 0;
+  background-color: #0090c6;
+  list-style: none;
+  position: relative;
+  width: 100px;
+  transition: all 0.3s ease;
+}
+
+.difficulty:hover {
+  cursor: default;
+}
+
+.difficulty li {
+  display: inline-block;
+  background-color: #0090c6;
+}
+
+.difficulty a {
+  display: block;
+  padding: 0 10px;
+  color: #fafafa;
+  line-height: 48px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.normal {
+  background: #F6BB42;
+}
+
+.hard {
+  background: #F14C4F;
+}
+
+.difficulty a:hover {
+  background: #292d32;
+}
+
+/* Hide Dropdowns by Default */
+.difficulty ul {
+  display: inherit;
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: 48px;
+  /* the height of the main .difficulty */
+  left: 0;
+  transform: translateY(-1em);
+  z-index: -1;
+  transition: all 0.3s ease;
+}
+
+/* Display Dropdowns on Hover */
+.difficulty:hover > ul {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0em);
+  z-index: 1;
+}
+
+/* Fisrt Tier Dropdown */
+.difficulty ul li {
+  background: #8CC152;
+  width: 100px;
+  float: none;
+  display: list-item;
+  position: relative;
+}
+
+/* Second, Third and more Tiers	*/
+
+/* Change this in order to change the Dropdown symbol */
+li > a:after {
+  content: " +";
+}
+
+li > a:only-child:after {
+  content: "";
+}
