@@ -13,23 +13,24 @@
 
 <body>
   <div class="page">
+
     <header>
       <h1>Typetrainer</h1>
       <div class="difficulty">Difficulty
-        <!-- First Tier Drop Down -->
+        <!-- Drop Down -->
         <ul>
           <li><a id="easy" href="#">Easy</a></li>
           <li><a class="normal" id="normal" href="#">Normal</a></li>
-          <li><a class="hard" id="hard" href="#">soon</a></li>
+          <li><a class="hard" id="hard" href="#">Hard</a></li>
         </ul>
       </div>
     </header>
-    <div class="content">
 
+    <div class="content">
       <!-- word and input -->
       <div class="left">
         <p class="lead">Type the given word within <span class="high-txt seconds" id="seconds">0</span> seconds:</p>
-        <h2 class="current" id="current-word">hello</h2>
+        <h2 class="current" id="current-word">start</h2>
         <input type="g" class="" placeholder="Start typing to begin.." id="word-input" autofocus>
         <h4 class="msg msg-hide" id="message">Game Over</h4>
       </div>
@@ -41,6 +42,9 @@
               <span id="time">0</span>
             </h3>
           </div>
+          <h3>Difficulty:
+            <span id="curLevel">easy</span>
+          </h3>
           <h3>Score:
             <span id="score">0</span>
           </h3>
@@ -50,6 +54,7 @@
         </div>
       </div>
     </div>
+
     <!-- instructions -->
     <div class="instructions">
       <h5>Instructions</h5>
@@ -58,22 +63,20 @@
         play again, just start typing again.</p>
       <h5>Info</h5>
       <p>Words come from <a class="txt-link" href="https://www.oxfordlearnersdictionaries.com/wordlists/oxford3000-5000"
-          target="_blank" rel="noopener">The Oxford 3000</a>. 'Easy' difficulty shows the input text and 'Normal'
-        difficulty hides it. Eventually difficulty will also sets the <a class="txt-link"
-          href="https://www.oxfordlearnersdictionaries.com/about/wordlists/cefr" target="_blank" rel="noopener">CEFR</a>
-        level of the words. Easy/CEFRA1 - Normal/CEFRB2 - Hard/CEFRC2 </p>
+          target="_blank" rel="noopener">The Oxford CEFR 3000/5000</a>. 'Easy' difficulty shows the input text and 'Normal'
+        difficulty hides it. Both pull words from CEFR A1. "Hard" hides the input text and pulls words from CEFR C1
     </div>
 
+    
+
   </div>
+  <footer>
+    <p>from <a class="txt-link" href="https://sphen.net"
+      target="_blank" rel="noopener">sphen</a></p>
+  </footer>
 
 
-
-
-
-
-
-
-  <script src="./app.js" async defer></script>
+<script src="./app.js" async defer></script>
 </body>
 
 </html>
